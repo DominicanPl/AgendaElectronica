@@ -45,7 +45,7 @@ namespace AgendaElectronica
                     command.Parameters.AddWithValue("@Movil", txtMovil.Text);
                     command.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
                     command.Parameters.AddWithValue("@Correo", txtCorreo.Text);
-
+                    Console.WriteLine(command.ExecuteScalar());
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
